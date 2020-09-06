@@ -11,6 +11,7 @@
       ./apps/vim/vim.nix
       ./apps/tmux/tmux.nix
       ./apps/termite/termite.nix
+      ./apps/zsh/zsh.nix
     ];
 
   # Use the systemd-boot EFI boot loader.
