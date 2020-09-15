@@ -23,7 +23,7 @@ let g:airline_theme='onedark'
 
 "STYLING
 colo one
-set termguicolors
+"set termguicolors
 set background=dark
 set term=xterm-termite
 set t_Co=256
@@ -45,3 +45,8 @@ let g:ale_completion_enabled = 1
 nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 nmap <silent> <C-j> <Plug>(ale_next_wrap)
 
+if exists('+termguicolors')
+  let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+  set termguicolors
+endif
