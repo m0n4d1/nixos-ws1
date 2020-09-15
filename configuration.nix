@@ -67,6 +67,7 @@
       which
       pciutils
       fontforge
+      nodejs_latest
     ];
 
 

@@ -11,7 +11,7 @@ import System.IO
 main = do  
     --setRandomWallpaper ["$HOME/Pictures/nixos-onedark-wallpaper.png"]
 
-    xmproc <- spawnPipe "xmobar"
+    xmproc <- spawnPipe ".xmobarrc"
 
     xmonad $ docks defaultConfig
         { manageHook = manageDocks <+> manageHook defaultConfig
@@ -34,7 +34,5 @@ main = do
           ((mod4Mask, xK_p                   ), spawn "dmenu_run -fn 'monospace:regular:pixelsize=12' -nb '#282c34' -sf '#282c34' -sb '#98c379' -nf '#abb2bf'" ) , 
           ((0       , xF86XK_AudioMute        ), spawn "amixer set Master toggle"),
           ((0       , xF86XK_AudioLowerVolume ), spawn "amixer -q set Master 2%-"),
-          ((0       , xF86XK_AudioRaiseVolume ), spawn "amixer -q sset Master 2%+"),
-          ((0       , xF86XK_MonBrightnessDown  ), spawn "xbacklight -dec 5"),
-          ((0       , xF86XK_MonBrightnessUp  ), spawn "xbacklight -inc 5") 
+          ((0       , xF86XK_AudioRaiseVolume ), spawn "amixer -q sset Master 2%+")
          ]  
