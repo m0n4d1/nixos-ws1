@@ -115,6 +115,7 @@
         '';
       }
     ];
+    services.xserver.displayManager.defaultSession = "none+xmonad";
     services.xserver.windowManager.xmonad = {
       config = builtins.readFile ./xmonad/xmonad.hs;
       enable = true;
@@ -126,9 +127,7 @@
         hpkgs.xmonad-wallpaper
       ];
     };
-    services.xserver.desktopManager.default      = "none";
     services.xserver.desktopManager.xterm.enable = false;
-    services.xserver.windowManager.default       = "xmonad";
 
   # Enable touchpad support.
     services.xserver.libinput.enable = true;
