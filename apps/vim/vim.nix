@@ -16,6 +16,7 @@
               "vim-nix"
               "vim-airline"
               "vim-airline-themes"
+              "vim-signify"
             ]; } 
         ];
       };
