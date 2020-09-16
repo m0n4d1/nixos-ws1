@@ -25,7 +25,7 @@
   };
   
 
-  # nixpkgs.config.allowUnfree = true;
+  nixpkgs.config.allowUnfree = true;
 
   # networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -56,6 +56,7 @@
   # $ nix search wget
     environment.systemPackages = with pkgs; [
       gimp
+      discord
       # libreoffice
       dmenu
       firefox
